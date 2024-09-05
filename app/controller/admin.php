@@ -58,7 +58,7 @@ Class admin extends base
                     }
                     else
                     {
-                        $server['software'] = 'Other';
+                        $server['software'] = 'Другое';
                     }
 
                     $this->app->view()->assign('server', $server);
@@ -331,19 +331,19 @@ Class admin extends base
     {
         if ($filesize >= 1073741824)
         {
-            $filesize = round($filesize / 1073741824 * 100) / 100 . ' GB';
+            $filesize = round($filesize / 1073741824 * 100) / 100 . ' Гб';
         }
         elseif ($filesize >= 1048576)
         {
-            $filesize = round($filesize / 1048576 * 100) / 100 . ' MB';
+            $filesize = round($filesize / 1048576 * 100) / 100 . ' Мб';
         }
         elseif ($filesize >= 1024)
         {
-            $filesize = round($filesize / 1024 * 100) / 100 . ' KB';
+            $filesize = round($filesize / 1024 * 100) / 100 . ' Кб';
         }
         else
         {
-            $filesize = $filesize . ' Bytes';
+            $filesize = $filesize . ' Байт';
         }
         return $filesize;
     }
