@@ -111,7 +111,7 @@ class Page
     }
 
 
-    public function first_page($name = 'Первая страница')
+    public function first_page($name = 'Первая')
     {
         if ($this->now_page > 5)
         {
@@ -120,7 +120,7 @@ class Page
         return '';
     }
 
-    public function last_page($name = 'Последняя страница')
+    public function last_page($name = 'Последняя')
     {
         if ($this->now_page < $this->total_pages - 5)
         {
